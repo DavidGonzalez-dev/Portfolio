@@ -1,0 +1,243 @@
+/* ------------------------------------------- */
+/* Se setea el CSS */
+/* ------------------------------------------- */
+
+:root{
+    --text-color: #DEE1DF;
+    --light-primary-green: #93BB99;
+    --ligth-secondary-green: #677D6A;
+    --dark-secondary-green: #40534C;
+}
+
+section[id]{
+    scroll-margin-top: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Chillax', sans-serif;
+}
+
+body {
+    background: url(../img/BackGorud\ Blur\ 1.png);
+    background-size: cover;
+    height: 300vh;
+}
+
+
+
+/* ------------------------------------------- */
+/* Componentes mas utilizados*/
+/* ------------------------------------------- */
+
+
+/* GlassMorfismo */
+.glass {
+    /* From https://css.glass */
+    background: rgba(51, 55, 53, 0.41);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(51, 55, 53, 0.23);
+    padding: 10px 15px;
+}
+
+nav button:hover svg{
+    filter: drop-shadow(0 0 10px var(--text-color));
+}
+
+
+/* Texto fluorecente */
+.glowy-text{
+    color: var(--light-primary-green);
+    text-shadow: 0 0 10px var(--light-primary-green);
+}
+
+/* Boton Primario */
+.button-primary{
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--light-primary-green);
+    border: 1px solid var(--light-primary-green);
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: .4s;
+}
+
+.button-primary:hover{
+    color: white;
+    background: linear-gradient(to left, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px var(--light-primary-green);
+}
+
+/* ------------------------------------------- */
+/* Estilos de la navbar*/
+/* ------------------------------------------- */
+
+nav ul li a {
+    color: var(--text-color) !important;
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: .4s;
+}
+
+nav ul li a:hover{
+    text-shadow: 0 0 10px var(--text-color);
+}
+
+nav button{
+    color: var(--text-color);
+    background: none;
+    border: none;
+    font-size: 19px;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: .4s;
+    padding: 7px 10px;
+}
+nav button:hover{
+    text-shadow: 0 0 10px var(--text-color);
+}
+
+nav button i{
+    font-size: 40px;
+}
+
+nav svg{
+    transition: .5s;
+}
+
+
+/* ------------------------------------------- */
+/* Estilos del Footer*/
+/* ------------------------------------------- */
+
+footer .redes-sociales{
+    width: fit-content;
+    display: flex;
+    gap: 0 21px;
+    margin: 0 auto;
+    transform: translateY(40px);
+    opacity: .5;
+    transition: .4s;
+}
+
+footer .redes-sociales:hover{
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+footer .red-social svg{
+    color: var(--text-color);
+    z-index: -1;
+}
+
+footer .red-social{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+
+footer .red-social:hover{
+    background: linear-gradient(var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
+    box-shadow: 0 0 10px var(--light-primary-green);
+}
+
+/* ------------------------------------------- */
+/* Estilos del Hero*/
+/* ------------------------------------------- */
+
+#hero{
+    margin-top: 100px;
+}
+
+#hero h2{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+#hero h1{
+    font-size: 90px;
+    font-weight: 600;
+}
+
+
+#hero p{
+    font-size: 27px;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+#hero img{
+    animation: 3s infinite float running;
+}
+
+#hero .botones-contacto{
+    display: flex;
+    gap: 0 15px;
+}
+
+/* ------------------------------------------- */
+/* Sumary */
+/* ------------------------------------------- */
+#sumary{
+    margin-top: 80px;
+}
+
+#sumary .sumary-cards{
+    width: fit-content;
+    display: flex;
+    gap: 0 100px;
+    padding: 20px 40px;
+}
+
+#sumary .sumary-card{
+    text-align: center;
+}
+
+#sumary .sumary-card h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--light-primary-green);
+    margin: 0;
+}
+
+#sumary p{
+    font-size: 90px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+    text-shadow: 0 0 10px var(--text-color);
+}
+
+
+/* ------------------------------------------- */
+/* Animaciones */
+/* ------------------------------------------- */
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
