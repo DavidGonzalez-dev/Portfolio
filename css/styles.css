@@ -4,6 +4,7 @@
 
 :root{
     --text-color: #DEE1DF;
+    --secondary-text-color: #BBBBBB;
     --light-primary-green: #93BB99;
     --ligth-secondary-green: #677D6A;
     --dark-secondary-green: #40534C;
@@ -208,6 +209,25 @@ footer .red-social:hover{
 
 #sumary .sumary-card{
     text-align: center;
+    position: relative;
+}
+
+#sumary .sumary-card:nth-child(odd)::before{
+    content: '';
+    width: 1px;
+    height: 90%;
+    background: var(--text-color);
+    position: absolute;
+    right: -50px;
+}
+
+#sumary .sumary-card:nth-child(2)::before{
+    content: '';
+    width: 1px;
+    height: 90%;
+    background: var(--text-color);
+    position: absolute;
+    right: -50px;
 }
 
 #sumary .sumary-card h4{
@@ -223,6 +243,79 @@ footer .red-social:hover{
     color: var(--text-color);
     margin: 0;
     text-shadow: 0 0 10px var(--text-color);
+}
+
+
+/* ------------------------------------------- */
+/* Seccion Experiencia*/
+/* ------------------------------------------- */
+#experience{
+    margin-top: 130px;
+    text-align: center;
+    position: relative;
+}
+
+#experience::before{
+    content: '';
+    position: absolute;
+    height: 838px;
+    width: 730px;
+    background: url(../img/detalle-experience.png);
+    background-size: cover;
+    left: -300px;
+    top: -250px;
+    animation: 3s infinite float running;
+}
+
+
+
+#experience h2{
+    color: var(--light-primary-green);
+    font-weight: 600;
+    font-size: 64px;
+    text-shadow: 0 0 10px var(--light-primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+#experience h2 svg{
+    filter: drop-shadow(0 0 10px var(--light-primary-green));
+}
+
+#experience .experience-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 37px 0;
+}
+
+#experience .experience-card{
+    padding: 21px 34px;
+}
+
+#experience .experience-card .titulo h5{
+    text-align: start;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+#experience .experience-card h5 svg{
+    color: var(--light-primary-green);
+}
+
+#experience .experience-card p{
+    color: var(--secondary-text-color);
+    font-size: 20px;
+    text-align: start;
+}
+
+#experience .experience-card .descripcion p{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
 }
 
 
