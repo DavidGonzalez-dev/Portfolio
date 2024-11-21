@@ -28,7 +28,8 @@ html{
 body {
     background: url(../img/BackGorud\ Blur\ 1.png);
     background-size: cover;
-    height: 300vh;
+    height: 500vh;
+    overflow-x: hidden;
 }
 
 
@@ -69,6 +70,7 @@ nav button:hover svg{
     border-radius: 10px;
     padding: 5px 10px;
     transition: .4s;
+    width: fit-content;
 }
 
 .button-primary:hover{
@@ -76,6 +78,52 @@ nav button:hover svg{
     background: linear-gradient(to left, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
     border: 1px solid transparent;
     box-shadow: 0 0 10px var(--light-primary-green);
+}
+
+
+/* Boton secundario */
+.secondary-button{
+    color: white;
+    background: linear-gradient(to left, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
+    padding: 7px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 10px var(--light-primary-green);
+    transition: .25s;
+    font-size: 20px;
+    width: fit-content;
+}
+
+.secondary-button:hover{
+    transform: scale(1.05);
+}
+
+/* Boton sin fondd */
+.background-less-button{
+    border: 1px solid var(--light-primary-green);
+    color: var(--light-primary-green) !important;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+
+
+/* Titulos de las Secciones */
+h2{
+    color: var(--light-primary-green);
+    font-weight: 600;
+    font-size: 64px;
+    text-shadow: 0 0 10px var(--light-primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+h2 svg{
+    filter: drop-shadow(0 0 10px var(--light-primary-green));
 }
 
 /* ------------------------------------------- */
@@ -87,13 +135,30 @@ nav ul li a {
     font-size: 19px;
     font-weight: 500;
     text-decoration: none;
-    margin: 0 30px;
     transition: .4s;
+    margin-left: 30px;
 }
 
 nav ul li a:hover{
     text-shadow: 0 0 10px var(--text-color);
 }
+
+nav ul{
+    display: flex;
+    gap: 15px 30px;
+}
+
+nav #nav-button{
+    color: var(--text-color);
+    border: none;
+}
+
+nav #nav-button:focus{
+    border: none;
+    box-shadow: none;
+    filter: drop-shadow(0 0 10px var(--text-color));
+}
+
 
 nav button{
     color: var(--text-color);
@@ -250,7 +315,7 @@ footer .red-social:hover{
 /* Seccion Experiencia*/
 /* ------------------------------------------- */
 #experience{
-    margin-top: 130px;
+    margin-top: 200px;
     text-align: center;
     position: relative;
 }
@@ -265,24 +330,9 @@ footer .red-social:hover{
     left: -300px;
     top: -250px;
     animation: 3s infinite float running;
+    z-index: -1;
 }
 
-
-
-#experience h2{
-    color: var(--light-primary-green);
-    font-weight: 600;
-    font-size: 64px;
-    text-shadow: 0 0 10px var(--light-primary-green);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 56px;
-}
-
-#experience h2 svg{
-    filter: drop-shadow(0 0 10px var(--light-primary-green));
-}
 
 #experience .experience-cards{
     display: flex;
@@ -291,15 +341,20 @@ footer .red-social:hover{
 }
 
 #experience .experience-card{
-    padding: 21px 34px;
+    padding: 15px 25px;
+    cursor: pointer;
 }
 
 #experience .experience-card .titulo h5{
-    text-align: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 10px;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
-    vertical-align: middle;
+    margin-bottom: 0;
+    text-wrap: pretty;
 }
 
 #experience .experience-card h5 svg{
@@ -310,13 +365,174 @@ footer .red-social:hover{
     color: var(--secondary-text-color);
     font-size: 20px;
     text-align: start;
+    margin-bottom: 0;
 }
 
 #experience .experience-card .descripcion p{
+    color: var(--text-color);
+    font: 20px;
+    margin-bottom: 0;
+}
+
+#experience img{
+    display: none;
+    transition: .4s;
+    border: 1px solid var(--ligth-secondary-green);
+    border-radius: 20px;
+}
+
+#experience img.enabled{
+    display: block;
+}
+
+#experience .imagen{
     display: flex;
     align-items: center;
-    color: var(--text-color);
+    justify-content: center;
+    padding: 0 30px;
 }
+
+/* ------------------------------------------- */
+/* Habilidades */
+/* ------------------------------------------- */
+#habilidades{
+    margin-top: 120px;
+    
+}
+
+#habilidades .container{
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    padding-top: 24px;
+    padding-bottom: 93px;
+}
+
+#habilidades .iconos-habilidades ul{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0 63px;
+    padding: 27px 20px;
+}
+
+#habilidades .iconos-habilidades svg{
+    transition: .25s;
+    cursor: pointer;
+}
+
+#habilidades .iconos-habilidades svg:hover{
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------- */
+/* Proyectos */
+/* ------------------------------------------- */
+#proyectos{
+    margin-top: 200px;
+    position: relative;
+}
+
+#proyectos::after{
+    content: '';
+    position: absolute;
+    height: 533px;
+    width: 523px;
+    background: url(../img/decoracion-proyectos.png);
+    top: -150px;
+    right: -200px;
+    z-index: -1;
+    animation: 3s float infinite;
+}
+
+#proyectos .proyect-card img{
+    border: 1px solid var(--ligth-secondary-green);
+    border-radius: 20px;
+    transition: .25s;
+}
+
+#proyectos .proyect-card img:hover{
+    transform: scale(1.025);
+}
+
+
+#proyectos .proyect-card .img-container{
+    text-align: center;
+}
+
+
+#proyectos .proyect-card h3{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--light-primary-green);
+    margin-bottom: 10px;
+}
+
+#proyectos .proyect-card ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    gap: 0 15px;
+}
+
+#proyectos .proyect-card p{
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+#proyectos .proyect-card .proyecto-botones{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 22px;
+}
+
+#proyectos .lista-proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 70px 0;
+}
+
+
+/* ------------------------------------------- */
+/* Educacion */
+/* ------------------------------------------- */
+#educacion{
+    margin-top: 200px;
+    padding-bottom: 100px;    
+}
+
+#educacion .educacion-cards-container{
+    border-top: 1px solid var(--text-color);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+}
+
+#educacion .educacion-card{
+    padding: 0 auto;
+}
+
+#educacion h3{
+    font-weight: 600;
+}
+
+#educacion .educacion-card h3, .icono svg{
+    color: var(--light-primary-green);
+
+}
+
+#educacion .educacion-card p{
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+
 
 
 /* ------------------------------------------- */
