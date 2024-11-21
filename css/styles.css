@@ -111,7 +111,7 @@ nav button:hover svg{
 
 
 /* Titulos de las Secciones */
-h2{
+h2.section-header{
     color: var(--light-primary-green);
     font-weight: 600;
     font-size: 64px;
