@@ -23,13 +23,28 @@ html{
     margin: 0;
     box-sizing: border-box;
     font-family: 'Chillax', sans-serif;
+    font-size: 22px;
 }
 
 body {
     background: url(../img/BackGorud\ Blur\ 1.png);
     background-size: cover;
-    height: 500vh;
+    padding: 5vh 0;
     overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: .3rem;
+}
+
+::-webkit-scrollbar-track{
+    background: #121513;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
+    height: 1rem;
+    border-radius: 1rem ;
 }
 
 
@@ -63,7 +78,7 @@ nav button:hover svg{
 
 /* Boton Primario */
 .button-primary{
-    font-size: 22px;
+    font-size: 1rem;
     text-decoration: none;
     color: var(--light-primary-green);
     border: 1px solid var(--light-primary-green);
@@ -91,7 +106,7 @@ nav button:hover svg{
     text-align: center;
     box-shadow: 0 0 10px var(--light-primary-green);
     transition: .25s;
-    font-size: 20px;
+    font-size: .8rem;
     width: fit-content;
 }
 
@@ -114,7 +129,7 @@ nav button:hover svg{
 h2.section-header{
     color: var(--light-primary-green);
     font-weight: 600;
-    font-size: 64px;
+    font-size: 3rem;
     text-shadow: 0 0 10px var(--light-primary-green);
     display: flex;
     justify-content: center;
@@ -124,15 +139,20 @@ h2.section-header{
 
 h2 svg{
     filter: drop-shadow(0 0 10px var(--light-primary-green));
+    width: 3rem;
+    height: 3rem;
 }
 
 /* ------------------------------------------- */
 /* Estilos de la navbar*/
 /* ------------------------------------------- */
 
+nav{
+    max-width: 100vw;
+}
 nav ul li a {
     color: var(--text-color) !important;
-    font-size: 19px;
+    font-size: .8rem;
     font-weight: 500;
     text-decoration: none;
     transition: .4s;
@@ -160,7 +180,8 @@ nav #nav-button:focus{
 }
 
 
-nav button{
+nav a{
+    text-decoration: none;
     color: var(--text-color);
     background: none;
     border: none;
@@ -186,6 +207,10 @@ nav svg{
 /* ------------------------------------------- */
 /* Estilos del Footer*/
 /* ------------------------------------------- */
+
+footer{
+    max-width: 100vw;
+}
 
 footer .redes-sociales{
     width: fit-content;
@@ -227,30 +252,31 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 
 #hero{
-    margin-top: 100px;
+    margin-top: 4.5rem;
 }
 
 #hero h2{
-    font-size: 35px;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0;
     color: var(--text-color);
 }
 
 #hero h1{
-    font-size: 90px;
+    font-size: 4rem;
     font-weight: 600;
 }
 
 
 #hero p{
-    font-size: 27px;
+    font-size: 1.2rem;
     color: var(--text-color);
-    margin-bottom: 50px;
+    margin-bottom: 2.3rem;
 }
 
 #hero img{
     animation: 3s infinite float running;
+    height: 30rem;
 }
 
 #hero .botones-contacto{
@@ -262,7 +288,7 @@ footer .red-social:hover{
 /* Sumary */
 /* ------------------------------------------- */
 #sumary{
-    margin-top: 80px;
+    margin-top: 3.5rem;
 }
 
 #sumary .sumary-cards{
@@ -270,6 +296,8 @@ footer .red-social:hover{
     display: flex;
     gap: 0 100px;
     padding: 20px 40px;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 #sumary .sumary-card{
@@ -296,14 +324,14 @@ footer .red-social:hover{
 }
 
 #sumary .sumary-card h4{
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--light-primary-green);
     margin: 0;
 }
 
 #sumary p{
-    font-size: 90px;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--text-color);
     margin: 0;
@@ -315,7 +343,7 @@ footer .red-social:hover{
 /* Seccion Experiencia*/
 /* ------------------------------------------- */
 #experience{
-    margin-top: 200px;
+    margin-top: 9rem;
     text-align: center;
     position: relative;
 }
@@ -341,9 +369,16 @@ footer .red-social:hover{
 }
 
 #experience .experience-card{
-    padding: 15px 25px;
+    padding: .8rem 1.2rem;
     cursor: pointer;
+    transition: .25s;
 }
+
+#experience .experience-card:not(:hover){
+    filter: blur(1px);
+    opacity: .5;
+}
+
 
 #experience .experience-card .titulo h5{
     display: flex;
@@ -351,7 +386,7 @@ footer .red-social:hover{
     align-items: center;
     gap: 0 10px;
     color: white;
-    font-size: 25px;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0;
     text-wrap: pretty;
@@ -361,9 +396,13 @@ footer .red-social:hover{
     color: var(--light-primary-green);
 }
 
+#experience .experience-card svg{
+    height: 1.2rem;
+}
+
 #experience .experience-card p{
     color: var(--secondary-text-color);
-    font-size: 20px;
+    font-size: 1rem;
     text-align: start;
     margin-bottom: 0;
 }
@@ -376,13 +415,14 @@ footer .red-social:hover{
 
 #experience img{
     display: none;
-    transition: .4s;
     border: 1px solid var(--ligth-secondary-green);
     border-radius: 20px;
+    animation: .25s expandir;
 }
 
 #experience img.enabled{
     display: block;
+    transform: scale(1.1);
 }
 
 #experience .imagen{
@@ -390,13 +430,18 @@ footer .red-social:hover{
     align-items: center;
     justify-content: center;
     padding: 0 30px;
+    transition: .25s;
 }
 
 /* ------------------------------------------- */
 /* Habilidades */
 /* ------------------------------------------- */
+#habilidaes svg{
+    height: 3rem;
+}
+
 #habilidades{
-    margin-top: 120px;
+    margin-top: 5.5rem;
     
 }
 
@@ -409,11 +454,12 @@ footer .red-social:hover{
 
 #habilidades .iconos-habilidades ul{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin-bottom: 0;
     align-items: center;
     justify-content: center;
-    gap: 0 63px;
+    gap: 0 3rem;
     padding: 27px 20px;
 }
 
@@ -430,7 +476,7 @@ footer .red-social:hover{
 /* Proyectos */
 /* ------------------------------------------- */
 #proyectos{
-    margin-top: 200px;
+    margin-top: 9rem;
     position: relative;
 }
 
@@ -446,6 +492,8 @@ footer .red-social:hover{
     animation: 3s float infinite;
 }
 
+
+
 #proyectos .proyect-card img{
     border: 1px solid var(--ligth-secondary-green);
     border-radius: 20px;
@@ -459,11 +507,16 @@ footer .red-social:hover{
 
 #proyectos .proyect-card .img-container{
     text-align: center;
+    max-width: 100vw;
+}
+
+#proyectos .proyect-card img{
+    max-width: 100%;
 }
 
 
 #proyectos .proyect-card h3{
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--light-primary-green);
     margin-bottom: 10px;
@@ -481,7 +534,7 @@ footer .red-social:hover{
 
 #proyectos .proyect-card p{
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 #proyectos .proyect-card .proyecto-botones{
@@ -502,7 +555,7 @@ footer .red-social:hover{
 /* Educacion */
 /* ------------------------------------------- */
 #educacion{
-    margin-top: 200px;
+    margin-top: 9rem;
     padding-bottom: 100px;    
 }
 
@@ -548,5 +601,115 @@ footer .red-social:hover{
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+@keyframes expandir{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    *{
+        font-size: 19px;
+    }
+
+    #hero img{
+        height: 22rem;
+    }
+
+    #experience::before{
+        left: -400px;
+    }
+
+    #habilidades .iconos-habilidades ul{
+        gap: 0 1.5rem;
+    }
+
+    #proyectos .proyect-card{
+        margin: 0 3rem;
+    }
+
+    #proyectos .proyect-card .img-container{
+        margin-bottom: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    body{
+        overflow: hidden;
+    }
+    *{
+        font-size: 15px;
+    }
+    
+    #hero .botones-contacto{
+        display: flex;
+        justify-content: center;
+    }
+
+    #hero img{
+        margin-top: 3rem;
+    }
+
+    #sumary .sumary-cards{
+        align-items: center;
+        justify-content: center;
+        margin: 0 .5rem;
+    }
+
+    #sumary .sumary-card:nth-child(odd)::before{
+        background: transparent;
+    }
+
+    #sumary .sumary-card:nth-child(2)::before{
+        background-color: transparent;
+    }
+
+    #experience::before{
+        left: -500px;
+    }
+
+    #experience .experience-card{
+        max-width: fit-content;
+        margin: 0 .5rem;
+    }
+
+    #experience img{
+        width: 90%;
+    }
+
+    #habilidades .iconos-habilidades ul{
+        gap:1.5rem 2rem;
+    }
+
+    #habilidades svg{
+        height: 2.7rem;
+    }
+
+    #proyectos .proyect-card .img-container{
+        text-align: center;
+    }
+
+    #proyectos .proyect-card .img-container{
+        margin-bottom: 2rem;
+    }
+
+    #proyectos .proyect-card .descripcion{
+        margin: 0 .5rem;
+    }
+
+    #educacion .educacion-card .buttons{
+        gap: 0 1rem !important;
+    }
+
+    #educacion .educacion-card{
+        margin: 0 .5rem;
     }
 }
