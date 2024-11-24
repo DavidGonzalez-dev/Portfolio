@@ -2,7 +2,7 @@
 /* Se setea el CSS */
 /* ------------------------------------------- */
 
-:root{
+:root {
     --text-color: #DEE1DF;
     --secondary-text-color: #BBBBBB;
     --light-primary-green: #93BB99;
@@ -10,11 +10,11 @@
     --dark-secondary-green: #40534C;
 }
 
-section[id]{
+section[id] {
     scroll-margin-top: 100px;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -33,18 +33,18 @@ body {
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: .3rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: #121513;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
     height: 1rem;
-    border-radius: 1rem ;
+    border-radius: 1rem;
 }
 
 
@@ -65,19 +65,19 @@ body {
     padding: 10px 15px;
 }
 
-nav button:hover svg{
+nav button:hover svg {
     filter: drop-shadow(0 0 10px var(--text-color));
 }
 
 
 /* Texto fluorecente */
-.glowy-text{
+.glowy-text {
     color: var(--light-primary-green);
     text-shadow: 0 0 10px var(--light-primary-green);
 }
 
 /* Boton Primario */
-.button-primary{
+.button-primary {
     font-size: 1rem;
     text-decoration: none;
     color: var(--light-primary-green);
@@ -88,7 +88,7 @@ nav button:hover svg{
     width: fit-content;
 }
 
-.button-primary:hover{
+.button-primary:hover {
     color: white;
     background: linear-gradient(to left, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
     border: 1px solid transparent;
@@ -97,7 +97,7 @@ nav button:hover svg{
 
 
 /* Boton secundario */
-.secondary-button{
+.secondary-button {
     color: white;
     background: linear-gradient(to left, var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
     padding: 7px 14px;
@@ -110,12 +110,12 @@ nav button:hover svg{
     width: fit-content;
 }
 
-.secondary-button:hover{
+.secondary-button:hover {
     transform: scale(1.05);
 }
 
 /* Boton sin fondd */
-.background-less-button{
+.background-less-button {
     border: 1px solid var(--light-primary-green);
     color: var(--light-primary-green) !important;
     padding: 5px 10px;
@@ -126,7 +126,7 @@ nav button:hover svg{
 
 
 /* Titulos de las Secciones */
-h2.section-header{
+h2.section-header {
     color: var(--light-primary-green);
     font-weight: 600;
     font-size: 3rem;
@@ -137,7 +137,7 @@ h2.section-header{
     margin-bottom: 56px;
 }
 
-h2 svg{
+h2 svg {
     filter: drop-shadow(0 0 10px var(--light-primary-green));
     width: 3rem;
     height: 3rem;
@@ -147,9 +147,10 @@ h2 svg{
 /* Estilos de la navbar*/
 /* ------------------------------------------- */
 
-nav{
+nav {
     max-width: 100vw;
 }
+
 nav ul li a {
     color: var(--text-color) !important;
     font-size: .8rem;
@@ -159,28 +160,28 @@ nav ul li a {
     margin-left: 30px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     text-shadow: 0 0 10px var(--text-color);
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 15px 30px;
 }
 
-nav #nav-button{
+nav #nav-button {
     color: var(--text-color);
     border: none;
 }
 
-nav #nav-button:focus{
+nav #nav-button:focus {
     border: none;
     box-shadow: none;
     filter: drop-shadow(0 0 10px var(--text-color));
 }
 
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--text-color);
     background: none;
@@ -191,15 +192,16 @@ nav a{
     transition: .4s;
     padding: 7px 10px;
 }
-nav button:hover{
+
+nav button:hover {
     text-shadow: 0 0 10px var(--text-color);
 }
 
-nav button i{
+nav button i {
     font-size: 40px;
 }
 
-nav svg{
+nav svg {
     transition: .5s;
 }
 
@@ -208,11 +210,11 @@ nav svg{
 /* Estilos del Footer*/
 /* ------------------------------------------- */
 
-footer{
+footer {
     max-width: 100vw;
 }
 
-footer .redes-sociales{
+footer .redes-sociales {
     width: fit-content;
     display: flex;
     gap: 0 21px;
@@ -222,17 +224,17 @@ footer .redes-sociales{
     transition: .4s;
 }
 
-footer .redes-sociales:hover{
+footer .redes-sociales:hover {
     transform: translateY(-10px);
     opacity: 1;
 }
 
-footer .red-social svg{
+footer .red-social svg {
     color: var(--text-color);
     z-index: -1;
 }
 
-footer .red-social{
+footer .red-social {
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -242,7 +244,7 @@ footer .red-social{
     transition: .4s;
 }
 
-footer .red-social:hover{
+footer .red-social:hover {
     background: linear-gradient(var(--ligth-secondary-green) 0%, var(--dark-secondary-green) 100%);
     box-shadow: 0 0 10px var(--light-primary-green);
 }
@@ -251,35 +253,35 @@ footer .red-social:hover{
 /* Estilos del Hero*/
 /* ------------------------------------------- */
 
-#hero{
+#hero {
     margin-top: 4.5rem;
 }
 
-#hero h2{
+#hero h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0;
     color: var(--text-color);
 }
 
-#hero h1{
+#hero h1 {
     font-size: 4rem;
     font-weight: 600;
 }
 
 
-#hero p{
+#hero p {
     font-size: 1.2rem;
     color: var(--text-color);
     margin-bottom: 2.3rem;
 }
 
-#hero img{
+#hero img {
     animation: 3s infinite float running;
     height: 30rem;
 }
 
-#hero .botones-contacto{
+#hero .botones-contacto {
     display: flex;
     gap: 0 15px;
 }
@@ -287,11 +289,11 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 /* Sumary */
 /* ------------------------------------------- */
-#sumary{
+#sumary {
     margin-top: 3.5rem;
 }
 
-#sumary .sumary-cards{
+#sumary .sumary-cards {
     width: fit-content;
     display: flex;
     gap: 0 100px;
@@ -300,12 +302,12 @@ footer .red-social:hover{
     flex-wrap: wrap;
 }
 
-#sumary .sumary-card{
+#sumary .sumary-card {
     text-align: center;
     position: relative;
 }
 
-#sumary .sumary-card:nth-child(odd)::before{
+#sumary .sumary-card:nth-child(odd)::before {
     content: '';
     width: 1px;
     height: 90%;
@@ -314,7 +316,7 @@ footer .red-social:hover{
     right: -50px;
 }
 
-#sumary .sumary-card:nth-child(2)::before{
+#sumary .sumary-card:nth-child(2)::before {
     content: '';
     width: 1px;
     height: 90%;
@@ -323,14 +325,14 @@ footer .red-social:hover{
     right: -50px;
 }
 
-#sumary .sumary-card h4{
+#sumary .sumary-card h4 {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--light-primary-green);
     margin: 0;
 }
 
-#sumary p{
+#sumary p {
     font-size: 4rem;
     font-weight: 700;
     color: var(--text-color);
@@ -342,13 +344,13 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 /* Seccion Experiencia*/
 /* ------------------------------------------- */
-#experience{
+#experience {
     margin-top: 9rem;
     text-align: center;
     position: relative;
 }
 
-#experience::before{
+#experience::before {
     content: '';
     position: absolute;
     height: 838px;
@@ -362,25 +364,25 @@ footer .red-social:hover{
 }
 
 
-#experience .experience-cards{
+#experience .experience-cards {
     display: flex;
     flex-direction: column;
     gap: 37px 0;
 }
 
-#experience .experience-card{
+#experience .experience-card {
     padding: .8rem 1.2rem;
     cursor: pointer;
     transition: .25s;
 }
 
-#experience .experience-card:not(:hover){
+#experience .experience-card:not(:hover) {
     filter: blur(1px);
     opacity: .5;
 }
 
 
-#experience .experience-card .titulo h5{
+#experience .experience-card .titulo h5 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -392,40 +394,40 @@ footer .red-social:hover{
     text-wrap: pretty;
 }
 
-#experience .experience-card h5 svg{
+#experience .experience-card h5 svg {
     color: var(--light-primary-green);
 }
 
-#experience .experience-card svg{
+#experience .experience-card svg {
     height: 1.2rem;
 }
 
-#experience .experience-card p{
+#experience .experience-card p {
     color: var(--secondary-text-color);
     font-size: 1rem;
     text-align: start;
     margin-bottom: 0;
 }
 
-#experience .experience-card .descripcion p{
+#experience .experience-card .descripcion p {
     color: var(--text-color);
     font: 20px;
     margin-bottom: 0;
 }
 
-#experience img{
+#experience img {
     display: none;
     border: 1px solid var(--ligth-secondary-green);
     border-radius: 20px;
     animation: .25s expandir;
 }
 
-#experience img.enabled{
+#experience img.enabled {
     display: block;
     transform: scale(1.1);
 }
 
-#experience .imagen{
+#experience .imagen {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -436,23 +438,23 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 /* Habilidades */
 /* ------------------------------------------- */
-#habilidaes svg{
+#habilidaes svg {
     height: 3rem;
 }
 
-#habilidades{
+#habilidades {
     margin-top: 5.5rem;
-    
+
 }
 
-#habilidades .container{
+#habilidades .container {
     border-top: 1px solid var(--text-color);
     border-bottom: 1px solid var(--text-color);
     padding-top: 24px;
     padding-bottom: 93px;
 }
 
-#habilidades .iconos-habilidades ul{
+#habilidades .iconos-habilidades ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -463,24 +465,24 @@ footer .red-social:hover{
     padding: 27px 20px;
 }
 
-#habilidades .iconos-habilidades svg{
+#habilidades .iconos-habilidades svg {
     transition: .25s;
     cursor: pointer;
 }
 
-#habilidades .iconos-habilidades svg:hover{
+#habilidades .iconos-habilidades svg:hover {
     transform: scale(1.2);
 }
 
 /* ------------------------------------------- */
 /* Proyectos */
 /* ------------------------------------------- */
-#proyectos{
+#proyectos {
     margin-top: 9rem;
     position: relative;
 }
 
-#proyectos::after{
+#proyectos::after {
     content: '';
     position: absolute;
     height: 533px;
@@ -494,35 +496,35 @@ footer .red-social:hover{
 
 
 
-#proyectos .proyect-card img{
+#proyectos .proyect-card img {
     border: 1px solid var(--ligth-secondary-green);
     border-radius: 20px;
     transition: .25s;
 }
 
-#proyectos .proyect-card img:hover{
+#proyectos .proyect-card img:hover {
     transform: scale(1.025);
 }
 
 
-#proyectos .proyect-card .img-container{
+#proyectos .proyect-card .img-container {
     text-align: center;
     max-width: 100vw;
 }
 
-#proyectos .proyect-card img{
+#proyectos .proyect-card img {
     max-width: 100%;
 }
 
 
-#proyectos .proyect-card h3{
+#proyectos .proyect-card h3 {
     font-size: 2rem;
     font-weight: 600;
     color: var(--light-primary-green);
     margin-bottom: 10px;
 }
 
-#proyectos .proyect-card ul{
+#proyectos .proyect-card ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -532,18 +534,18 @@ footer .red-social:hover{
     gap: 0 15px;
 }
 
-#proyectos .proyect-card p{
+#proyectos .proyect-card p {
     color: var(--text-color);
     font-size: 1rem;
 }
 
-#proyectos .proyect-card .proyecto-botones{
+#proyectos .proyect-card .proyecto-botones {
     display: flex;
     justify-content: flex-start;
     gap: 0 22px;
 }
 
-#proyectos .lista-proyectos{
+#proyectos .lista-proyectos {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -554,12 +556,12 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 /* Educacion */
 /* ------------------------------------------- */
-#educacion{
+#educacion {
     margin-top: 9rem;
-    padding-bottom: 100px;    
+    padding-bottom: 100px;
 }
 
-#educacion .educacion-cards-container{
+#educacion .educacion-cards-container {
     border-top: 1px solid var(--text-color);
     padding-top: 50px;
     display: flex;
@@ -567,20 +569,21 @@ footer .red-social:hover{
     gap: 50px 0;
 }
 
-#educacion .educacion-card{
+#educacion .educacion-card {
     padding: 0 auto;
 }
 
-#educacion h3{
+#educacion h3 {
     font-weight: 600;
 }
 
-#educacion .educacion-card h3, .icono svg{
+#educacion .educacion-card h3,
+.icono svg {
     color: var(--light-primary-green);
 
 }
 
-#educacion .educacion-card p{
+#educacion .educacion-card p {
     color: var(--text-color);
     font-size: 18px;
 }
@@ -591,125 +594,129 @@ footer .red-social:hover{
 /* ------------------------------------------- */
 /* Animaciones */
 /* ------------------------------------------- */
-@keyframes float{
-    0%{
+@keyframes float {
+    0% {
         transform: translateY(0);
     }
 
-    50%{
+    50% {
         transform: translateY(-25px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
 
-@keyframes expandir{
-    0%{
+@keyframes expandir {
+    0% {
         transform: scale(0.9);
     }
-    100%{
+
+    100% {
         transform: scale(1.1);
     }
 }
 
 /* Media Queries */
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    *{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    * {
         font-size: 19px;
     }
 
-    #hero img{
+    #hero img {
         height: 22rem;
     }
 
-    #experience::before{
+    #experience::before {
         left: -400px;
     }
 
-    #habilidades .iconos-habilidades ul{
+    #habilidades .iconos-habilidades ul {
         gap: 0 1.5rem;
     }
 
-    #proyectos .proyect-card{
+    #proyectos .proyect-card {
         margin: 0 3rem;
     }
 
-    #proyectos .proyect-card .img-container{
+    #proyectos .proyect-card .img-container {
         margin-bottom: 2rem;
     }
-    
+
 }
 
-@media screen and (max-width: 767px){
-    body{
-        overflow: hidden;
-    }
-    *{
+@media screen and (max-width: 767px) {
+
+    * {
         font-size: 15px;
     }
-    
-    #hero .botones-contacto{
+
+    #hero .botones-contacto {
         display: flex;
         justify-content: center;
     }
 
-    #hero img{
+    #hero img {
         margin-top: 3rem;
     }
 
-    #sumary .sumary-cards{
+    #sumary .sumary-cards {
         align-items: center;
         justify-content: center;
         margin: 0 .5rem;
     }
 
-    #sumary .sumary-card:nth-child(odd)::before{
+    #sumary .sumary-card {
+        width: 100%;
+    }
+
+    #sumary .sumary-card:nth-child(odd)::before {
         background: transparent;
     }
 
-    #sumary .sumary-card:nth-child(2)::before{
+    #sumary .sumary-card:nth-child(2)::before {
         background-color: transparent;
     }
 
-    #experience::before{
+    #experience::before {
         left: -500px;
     }
 
-    #experience .experience-card{
+    #experience .experience-card {
         max-width: fit-content;
         margin: 0 .5rem;
     }
 
-    #experience img{
+    #experience img {
         width: 90%;
     }
 
-    #habilidades .iconos-habilidades ul{
-        gap:1.5rem 2rem;
+    #habilidades .iconos-habilidades ul {
+        gap: 1.5rem 2rem;
     }
 
-    #habilidades svg{
+    #habilidades svg {
         height: 2.7rem;
     }
 
-    #proyectos .proyect-card .img-container{
+    #proyectos .proyect-card .img-container {
         text-align: center;
     }
 
-    #proyectos .proyect-card .img-container{
+    #proyectos .proyect-card .img-container {
         margin-bottom: 2rem;
     }
 
-    #proyectos .proyect-card .descripcion{
+    #proyectos .proyect-card .descripcion {
         margin: 0 .5rem;
     }
 
-    #educacion .educacion-card .buttons{
+    #educacion .educacion-card .buttons {
         gap: 0 1rem !important;
     }
 
-    #educacion .educacion-card{
+    #educacion .educacion-card {
         margin: 0 .5rem;
     }
 }
