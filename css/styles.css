@@ -621,11 +621,44 @@ footer .red-social:hover {
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     * {
-        font-size: 30px;
+        font-size: 15px;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    section[id] {
+        text-align: center;
+        overflow-x: hidden;
+        max-width: 100%;
+        padding: 30px 0;
+    }
+
+    nav .glass {
+        width: 70%;
     }
 
     #hero img {
         height: 30rem;
+        margin-top: 100px;
+    }
+
+    #hero .botones-contacto {
+        justify-content: center;
+    }
+
+    #sumary .sumary-cards {
+        width: 80%;
+        padding: 20px 0;
+    }
+
+    #sumary .sumary-card {
+        width: 40%;
+    }
+
+    #sumary .sumary-card:nth-child(2)::before {
+        display: none;
     }
 
     #experience::before {
@@ -633,7 +666,7 @@ footer .red-social:hover {
     }
 
     #experience img {
-        width: 60%;
+        width: 50%;
     }
 
     #habilidades .iconos-habilidades ul {
@@ -648,22 +681,49 @@ footer .red-social:hover {
         margin-bottom: 2rem;
     }
 
+    #experience::before {
+        left: -500px;
+        animation: none;
+    }
+
+    #proyectos::after {
+        top: 0;
+        animation: none;
+    }
+
+
+    #habilidades .iconos-habilidades {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #habilidades .iconos-habilidades ul {
+        gap: 30px;
+    }
+
+    #habilidades .iconos-habilidades svg {
+        height: 2.7rem;
+    }
+
+    #proyectos .proyect-card .descripcion{
+        text-align: start;
+    }
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 665px) {
 
     * {
         font-size: 15px;
     }
 
-    section[id]{
+    section[id] {
         overflow-x: hidden;
     }
 
     footer .redes-sociales {
         opacity: 1;
-        transform:translateY(0);
+        transform: translateY(0);
     }
 
     #hero .botones-contacto {
@@ -719,8 +779,8 @@ footer .red-social:hover {
     #proyectos .proyect-card .img-container {
         text-align: center;
     }
-    
-    #proyectos::after{
+
+    #proyectos::after {
         top: 0;
         animation: none;
     }
@@ -740,4 +800,4 @@ footer .red-social:hover {
     #educacion .educacion-card {
         margin: 0 .5rem;
     }
-    }
+}
