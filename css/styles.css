@@ -691,6 +691,18 @@ footer .red-social:hover {
         animation: none;
     }
 
+    #educacion .educacion-card{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
+    #educacion .educacion-card .buttons{
+        justify-content: start;
+        gap: 0 20px;
+    }
+
 
     #habilidades .iconos-habilidades {
         width: 70%;
