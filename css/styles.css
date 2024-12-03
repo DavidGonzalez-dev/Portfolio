@@ -114,7 +114,7 @@ nav button:hover svg {
     transform: scale(1.05);
 }
 
-/* Boton sin fondd */
+/* Boton sin fondo */
 .background-less-button {
     border: 1px solid var(--light-primary-green);
     color: var(--light-primary-green) !important;
@@ -211,7 +211,7 @@ nav svg {
 /* ------------------------------------------- */
 
 footer {
-    max-width: 100vw;
+    width: fit-content;
 }
 
 footer .redes-sociales {
@@ -621,15 +621,19 @@ footer .red-social:hover {
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     * {
-        font-size: 19px;
+        font-size: 30px;
     }
 
     #hero img {
-        height: 22rem;
+        height: 30rem;
     }
 
     #experience::before {
         left: -400px;
+    }
+
+    #experience img {
+        width: 60%;
     }
 
     #habilidades .iconos-habilidades ul {
@@ -644,12 +648,22 @@ footer .red-social:hover {
         margin-bottom: 2rem;
     }
 
+
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     * {
         font-size: 15px;
+    }
+
+    section[id]{
+        overflow-x: hidden;
+    }
+
+    footer .redes-sociales {
+        opacity: 1;
+        transform:translateY(0);
     }
 
     #hero .botones-contacto {
@@ -681,6 +695,7 @@ footer .red-social:hover {
 
     #experience::before {
         left: -500px;
+        animation: none;
     }
 
     #experience .experience-card {
@@ -693,6 +708,7 @@ footer .red-social:hover {
     }
 
     #habilidades .iconos-habilidades ul {
+        display: flex;
         gap: 1.5rem 2rem;
     }
 
@@ -702,6 +718,11 @@ footer .red-social:hover {
 
     #proyectos .proyect-card .img-container {
         text-align: center;
+    }
+    
+    #proyectos::after{
+        top: 0;
+        animation: none;
     }
 
     #proyectos .proyect-card .img-container {
@@ -719,4 +740,4 @@ footer .red-social:hover {
     #educacion .educacion-card {
         margin: 0 .5rem;
     }
-}
+    }
